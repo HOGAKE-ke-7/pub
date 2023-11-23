@@ -198,6 +198,18 @@ def draw_boxes(img, bbox, names,object_id, identities=None, offset=(0, 0)):
                     object_counter1[obj_name] = 1
                 else:
                     object_counter1[obj_name] += 1
+              # Handling pergerakan ke timur (East)
+              if "East" in direction:
+                if obj_name not in object_counter2:
+                    object_counter2[obj_name] = 1
+                else:
+                    object_counter2[obj_name] += 1
+              # Handling pergerakan ke barat (West)
+              if "West" in direction:
+                if obj_name not in object_counter3:
+                    object_counter3[obj_name] = 1
+                else:
+                    object_counter3[obj_name] += 1    
         UI_box(box, img, label=label, color=color, line_thickness=2)
         # draw trail
         for i in range(1, len(data_deque[id])):
