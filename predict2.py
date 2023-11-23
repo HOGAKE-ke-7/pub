@@ -29,6 +29,10 @@ object_counter = {}
 
 object_counter1 = {}
 
+object_counter2 = {}
+
+object_counter3 = {}
+
 line = [(50, 1500), (3800, 1500)]
 def init_tracker():
     global deepsort
